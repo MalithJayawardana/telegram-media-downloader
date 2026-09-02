@@ -1,24 +1,18 @@
-# Telegram Playlist & Video Batch Downloader
+# 🚀 Telegram Video Downloader
 
-A high-speed Python script to download video series, playlists, or course modules sequentially (from oldest to newest) from any Telegram channel or group.
+A fast Python script to download videos in parallel from any Telegram channel or group.
 
-## Features
+## 🌟 Features
 
-- **Sequential Downloading**: Downloads videos in original order (Part 1, Part 2, etc.) using `reverse=True`.
-- **High-Speed Parallel Downloads**: Uses multi-worker async architecture to bypass Telegram's per-connection speed throttle.
-- **Smart Resume**: Logs successfully downloaded video IDs in `_completed.log` to skip already downloaded content if restarted.
-- **File Size Filter**: Automatically skips videos larger than your limit (Default: 200MB).
-- **Interactive Progress Bar**: Live speed, remaining time, and progress updates using Rich console.
+- ⚡ **High-Speed Downloads:** Downloads up to 10 videos at the same time.
+- ⏳ **Sequential Order:** Downloads from oldest to newest (Part 1, Part 2, etc.).
+- 🔄 **Smart Resume:** Auto-skips already downloaded files if restarted.
+- 📦 **Size Filter:** Automatically skips videos larger than your set limit (Default: 200MB).
 
-## Configuration
+---
 
-Open the script and edit your channel details:
+## 🛠️ Setup Instructions
 
-```python
-API_ID = 12345678  # Your Telegram API ID
-API_HASH = "YOUR_API_HASH"  # Your Telegram API Hash
-
-# Channel/Group target:
-# Public:  CHANNEL_LINK = "channel_username"
-# Private: CHANNEL_LINK = -1001234567890
-CHANNEL_LINK = -1003246768376
+### 1. Install Requirements
+```bash
+pip install telethon rich python-dotenv
